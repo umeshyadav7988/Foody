@@ -13,7 +13,7 @@ router.post(
   [
     body("email").isEmail(),
     body("name").isLength({ min: 5 }),
-    body("password", "Incorrect Password").isLength({ min: 5 }),
+    body("password", "Incorrect Password").isLength({ min: 5 }) ,
   ],
   async (req, resp) => {
     const errors = validationResult(req);
